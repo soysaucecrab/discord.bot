@@ -2,6 +2,7 @@ import discord
 import asyncio
 from discord.ext import commands
 from discord.ext.commands import bot
+import os
 
 bot = commands.Bot(command_prefix='!')
 
@@ -21,4 +22,6 @@ async def 섭주(ctx):
 async def 서버주소(ctx):
     await ctx.send('soysaucecrab.kro.kr')
 
-bot.run('OTU5Njc5NjgyOTE4MzU0OTc1.YkfZWg.WsmoYrMAbaIhkmOeVCe-4vMbzHk')
+    
+access_token = os.environ["BOT_TOKEN"]
+bot.run(access_token)
